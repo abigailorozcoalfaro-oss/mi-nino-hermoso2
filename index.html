@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para mi niño hermoso</title>
+
+<style>
+body {
+  background: linear-gradient(#ffd6e8, #fff);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #d63384;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.si {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+.no {
+  background-color: #ccc;
+}
+
+img {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 12px 0;
+}
+
+.corazon {
+  font-size: 40px;
+  animation: latido 1s infinite;
+  margin: 20px 0;
+}
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+#contenido {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO (SUENA TODO EL TIEMPO DESPUÉS DEL PRIMER CLICK) -->
+<audio id="musica" loop>
+  <source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+<div id="inicio">
+  <h1>💌 ¿Quieres ser mi San Valentín? 💌</h1>
+  <div class="corazon">❤️</div>
+
+  <button class="si" onclick="aceptar()">Sí 💕</button>
+  <button class="no" onclick="alert('No es una opción 😌')">No</button>
+</div>
+
+<div id="contenido">
+  <h1>💖 Mi niño hermoso 💖</h1>
+
+  <p>
+  Desde el <strong>16 de junio de 2025</strong><br>
+  mi corazón decidió quedarse contigo.<br><br>
+  Eres romántico, tierno, coqueto y sentimental.<br>
+  Gracias por ser mi lugar seguro 💕
+  </p>
+
+  <img src="foto1.jpg">
+  <img src="foto2.jpg">
+  <img src="foto3.jpg">
+  <img src="foto4.jpg">
+  <img src="foto5.jpg">
+
+  <p>
+  Te amo más de lo que estas palabras pueden decir.<br>
+  Siempre tuya 💌
+  </p>
+</div>
+
+<script>
+function aceptar() {
+  document.getElementById("inicio").style.display = "none";
+  document.getElementById("contenido").style.display = "block";
+  document.getElementById("musica").play();
+}
+</script>
+
+</body>
+</html>
